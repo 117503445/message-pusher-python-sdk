@@ -1,7 +1,7 @@
 [tool.poetry]
 
 name = "message-pusher-sdk"
-version = "0.0"
+version = "0.1.0"
 description = "Python SDK for message-pusher"
 
 packages = [{ include = "message_pusher_sdk" }]
@@ -72,6 +72,10 @@ ipython = "^7.12.0"
 [tool.poetry.scripts]
 
 message-pusher-sdk = "message_pusher_sdk.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+htutil = "^3.0.0"
 
 [tool.black]
 

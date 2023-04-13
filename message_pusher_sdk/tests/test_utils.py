@@ -1,13 +1,16 @@
 """Sample unit test module using pytest-describe and expecter."""
 # pylint: disable=redefined-outer-name,unused-variable,expression-not-assigned,singleton-comparison
 
-from message_pusher_sdk import utils
+from message_pusher_sdk.message_pusher_sdk import MessagePusherSDK
+from htutil import file
+from pathlib import Path
 
 
 def describe_feet_to_meters():
 
-    def when_integer(expect):
-        expect(utils.feet_to_meters(42)) == 12.80165
+    def push(expect):
+        cfg = file.read_json(Path(__file__).parent / 'config.json')
+        sdk = MessagePusherSDK(cfg['host'], cfg['token'])
+        resp = sdk.push(cfg['username'], 'title', 'desc', '')
 
-    def when_string(expect):
-        expect(utils.feet_to_meters("hello")) == None
+        expect(resp) == None

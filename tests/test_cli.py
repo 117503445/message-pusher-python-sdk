@@ -4,28 +4,23 @@
 import pytest
 from expecter import expect
 
-from click.testing import CliRunner
-
-from message_pusher_sdk.cli import main
 
 
-@pytest.fixture
-def runner():
-    return CliRunner()
 
 
-def describe_cli():
 
-    def describe_conversion():
+# def describe_cli():
 
-        def when_integer(runner):
-            result = runner.invoke(main, ['42'])
+#     def describe_conversion():
 
-            expect(result.exit_code) == 0
-            expect(result.output) == "12.80165\n"
+#         def when_integer(runner):
+#             result = runner.invoke(main, ['42'])
 
-        def when_invalid(runner):
-            result = runner.invoke(main, ['foobar'])
+#             expect(result.exit_code) == 0
+#             expect(result.output) == "12.80165\n"
 
-            expect(result.exit_code) == 0
-            expect(result.output) == ""
+#         def when_invalid(runner):
+#             result = runner.invoke(main, ['foobar'])
+
+#             expect(result.exit_code) == 0
+#             expect(result.output) == ""

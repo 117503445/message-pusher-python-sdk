@@ -43,5 +43,5 @@ $ python
 ```
 
 ```sh
-py test
+pytest
 ```
