@@ -1,0 +1,19 @@
+site_name: message-pusher-sdk
+site_description: Python SDK for message-pusher
+site_author: 117503445
+
+repo_url: https://github.com/117503445/message-pusher-python-sdk
+edit_uri: https://github.com/117503445/message-pusher-python-sdk/edit/master/docs
+
+theme: readthedocs
+
+markdown_extensions:
+  - codehilite
+
+nav:
+  - Home: index.md
+  - Advanced: advanced.md
+  - About:
+    - Release Notes: about/changelog.md
+    - Contributor Guide: about/contributing.md
+    - License: about/license.md
