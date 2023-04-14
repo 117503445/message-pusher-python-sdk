@@ -36,10 +36,10 @@ jobs:
       # - name: Test code
       #   run: make test
 
-      - name: Upload coverage
-        uses: codecov/codecov-action@v1
-        with:
-          fail_ci_if_error: true
+      # - name: Upload coverage
+      #   uses: codecov/codecov-action@v1
+      #   with:
+      #     fail_ci_if_error: true
 
       - name: upload
         env:
