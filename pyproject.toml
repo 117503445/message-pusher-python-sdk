@@ -69,13 +69,12 @@ MacFSEvents = { version = "*", platform = "darwin" }
 pync = { version = "*", platform = "darwin" }
 ipython = "^7.12.0"
 
+autopep8 = "^2.0.2"
+htutil = "^3.0.0"
+
 [tool.poetry.scripts]
 
 message-pusher-sdk = "message_pusher_sdk.cli:main"
-
-[tool.poetry.group.dev.dependencies]
-autopep8 = "^2.0.2"
-htutil = "^3.0.0"
 
 [tool.black]
 
